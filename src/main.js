@@ -1,0 +1,1 @@
+exports.subjectName = require('./subject_name/parser');
