@@ -1,8 +1,7 @@
-[![NPM version][npm-version-image]][npm-url]
-[![NPM downloads][npm-downloads-image]][downloads-url]
-[![Build Status][travis-image]][travis-url]
-
 # CryptoPro Parser
+
+[![NPM version][npm-version-image]][npm-url]
+[![Build Status][travis-image]][travis-url]
 ______
 
 Библиотека для парсинга данных формата 
@@ -57,3 +56,9 @@ var inn = result.findByName('ИНННННН'); // undefined
 ```js
 var email = result.findByName('e-mail'); // undefined
 ```
+
+
+[npm-url]: https://npmjs.org/package/cryptopro-parser
+[npm-version-image]: http://img.shields.io/npm/v/cryptopro-parser.svg?style=flat
+[travis-url]: https://travis-ci.org/genkaok/cryptopro-parser
+[travis-image]: http://img.shields.io/travis/genkaok/cryptopro-parser/master.svg?style=flat
