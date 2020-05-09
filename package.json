@@ -1,7 +1,7 @@
 {
-  "name": "cryptopro_parser",
-  "version": "1.0.0",
-  "description": "",
+  "name": "cryptopro-parser",
+  "version": "0.0.1",
+  "description": "Parser data from cryptopro certificate",
   "main": "src/main.js",
   "scripts": {
     "clean": "rimraf dist",
