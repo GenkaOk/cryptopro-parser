@@ -1,5 +1,5 @@
 const resultObject = require('../resultObject');
-const constants = require('./constants');
+const constants = require('../constants');
 
 exports.parse = function (rawInfo) {
     var extractedEntities = rawInfo.match(/([а-яА-Яa-zA-Z0-9.]+)=(?:("[^"]+?")|(.+?))(?:,|$)/g);

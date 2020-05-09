@@ -1,15 +1,23 @@
 {
   "name": "cryptopro-parser",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Parser data from cryptopro certificate",
   "main": "src/main.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/GenkaOk/cryptopro-parser"
+  },
   "scripts": {
     "clean": "rimraf dist",
     "build": "webpack",
     "test": "mocha"
   },
   "keywords": [],
-  "author": "GenkaOk",
+  "author": {
+    "name": "GenkaOk",
+    "email": "genkaok@yandex.ru",
+    "url": "https://github.com/GenkaOk"
+  },
   "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.9.6",

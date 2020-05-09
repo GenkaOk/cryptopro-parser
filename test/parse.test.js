@@ -13,3 +13,19 @@ it('should find cyr', function () {
     assert.strictEqual('00011111111', resultParse.findByName('СНИЛС'))
     assert.strictEqual('222222222222', resultParse.findByName('ИНН'))
 });
+
+it('should parse issuer name', function () {
+    var resultParse = parser.issuerName.parse('CN="ООО ""КОМПАНИЯ ""ТЕНЗОР""", O="ООО ""КОМПАНИЯ ""ТЕНЗОР""", OU=Удостоверяющий центр, STREET="Московский проспект, д. 12", L=г. Ярославль, S=76 Ярославская область, C=RU, INN=007605016030, OGRN=1027600787994, E=ca_tensor@tensor.ru');
+    assert.strictEqual('ООО "КОМПАНИЯ "ТЕНЗОР"', resultParse.findByName('Владелец'));
+    assert.strictEqual('ООО "КОМПАНИЯ "ТЕНЗОР"', resultParse.findByName('Компания'));
+    assert.strictEqual('Удостоверяющий центр', resultParse.findByName('Подразделение'));
+    assert.strictEqual('Московский проспект, д. 12', resultParse.findByName('Адрес'));
+    assert.strictEqual('г. Ярославль', resultParse.findByName('Город'));
+    assert.strictEqual('76 Ярославская область', resultParse.findByName('Регион'));
+    assert.strictEqual('007605016030', resultParse.findByName('ИНН'));
+    assert.strictEqual('1027600787994', resultParse.findByName('ОГРН'));
+    assert.strictEqual('ca_tensor@tensor.ru', resultParse.findByName('Email'));
+});
+
+
+//
