@@ -3,7 +3,8 @@ module.exports = {
     entry: __dirname + "/src/main.js",
     output: {
         path: __dirname + "/dist/",
-        library: 'cryptoProParser'
+        library: 'cryptoProParser',
+        filename: 'cp_parser.min.js',
     },
     module: {
         rules: [
